@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='./assets/styles.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+    <script src='./assets/scripts.js'></script>
+</head>
+<body>
+    <div class='container'>
+        <h1>Dice Roller for Savage Worlds</h1>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Skill Check
+                        <div type="button" class="btn btn-primary float-right" id="rollSkill">Roll</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                Rolls
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="skillDie">Skill Die:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <select id="skillDie">
+                                            <option value="4">4</option>
+                                            <option value="6">6</option>
+                                            <option value="8">8</option>
+                                            <option value="10">10</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <!-- Skill Die-->
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="wildDie">Wild Die:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <select id="wildDie">
+                                            <option value="4">4</option>
+                                            <option value="6" selected>6</option>
+                                            <option value="8">8</option>
+                                            <option value="10">10</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <!-- Wild Die-->
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                Modifiers
+                                <div class="row">
+                                    <!-- Bonus: -->
+                                    <form>
+                                        <!-- <div class="col-3"> -->
+                                            <label for="bonus">Bonus:</label>
+                                        <!-- </div> -->
+                                        <!-- <div class="col-3"> -->
+                                            <input type="number" id="bonus" name="bonus" value=0 min=0>
+                                        <!-- </div> -->
+                                        <!-- <div class="col-6"></div> -->
+                                    </form>
+                                    <form>
+                                        <label for="penalty">Penalty:</label>
+                                        <input type="number" id="penalty" name="penalty" value=0 min=0>
+                                    </form>
+                                </div>
+                                <!-- bonus -->
+                                <!-- penalty -->
+                            </div>
+                            <div class="col-3">
+                                Difficulty
+                                <div class="row">
+                                    <form>
+                                        <!-- <label for="penalty">Penalty:</label> -->
+                                        <input type="number" id="difficulty" name="difficulty" value=4 min=1>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                Result
+                                <div class="row" id="resultOutput">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Damage Box -->
+        </div>
+    </div>
+</body>
+</html>
