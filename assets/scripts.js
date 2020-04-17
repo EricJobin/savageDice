@@ -39,8 +39,8 @@ rollSkillCheck = (skillDie, wildDie) => {
 checkSuccess = (rollTotal, checkDifficulty) =>{
     if(rollTotal >= checkDifficulty){
         //Return Good Stuff
-        let advances= Math.trunc( (rollTotal-checkDifficulty)/4 );
-        return ["Success!", advances];
+        let raises= Math.trunc( (rollTotal-checkDifficulty)/4 );
+        return ["Success!", raises];
     }
     else{return ["Fail", 0]}
 };
@@ -56,7 +56,7 @@ $(document).ready(function(){
         $("#resultOutput").append(fTotal)
         let goodStuff = checkSuccess(fTotal, parseInt($("#difficulty").val()));
         $("#resultOutput").append(`<br>${goodStuff[0]}`)
-        if (goodStuff[1] > 0){$("#resultOutput").append(` With ${goodStuff[1]} Advance`)};
+        if (goodStuff[1] > 0){$("#resultOutput").append(` With ${goodStuff[1]} Raise`)};
         if (goodStuff[1] > 1){$("#resultOutput").append(`s`)};
     });
   
