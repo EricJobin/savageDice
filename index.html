@@ -14,7 +14,9 @@
 <body>
     <div class='container'>
         <h1>Dice Roller for Savage Worlds</h1>
-        <div class="row">
+        
+        <!-- This section is for Skill Checks -->
+        <div class="row"> 
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
@@ -91,6 +93,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- This section is for damage rolls -->
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -99,11 +103,84 @@
                         <div type="button" class="btn btn-primary float-right" id="rollDamage">Roll</div>
                     </div>
                     <div class="card-body">
-                        
+                        <div class="row">
+                            <div class="col-3">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>Die</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d4roll" name="d4roll"></td>
+                                        <td>d4</td>
+                                        <td><input type="number" id="d4qty" name="d4qty" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d6roll" name="d6roll"></td>
+                                        <td>d6</td>
+                                        <td><input type="number" id="d6qty" name="d6qty" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d8roll" name="d8roll"></td>
+                                        <td>d8</td>
+                                        <td><input type="number" id="d8qty" name="d8qty" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d10roll" name="d10roll"></td>
+                                        <td>d10</td>
+                                        <td><input type="number" id="d10qty" name="d10qty" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d12roll" name="d12roll"></td>
+                                        <td>d12</td>
+                                        <td><input type="number" id="d12qty" name="d12qty" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d20roll" name="d20roll"></td>
+                                        <td>d20</td>
+                                        <td><input type="number" id="d20qty" name="d20qty" value=0 min=0></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-3">
+                                Modifiers
+                                <div class="row">
+                                    <!-- Bonus: -->
+                                    <form>
+                                        <label for="damageBonus">Bonus:</label>
+                                        <input type="number" id="damageBonus" name="damageBonus" value=0 min=0>
+                                    </form>
+                                    <!-- penalty -->                                    
+                                    <form>
+                                        <label for="damagePenalty">Penalty:</label>
+                                        <input type="number" id="damagePenalty" name="damagePenalty" value=0 min=0>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                Toughness
+                                <div class="row">
+                                    <form>
+                                        <input type="number" id="toughness" name="toughness" value=4 min=1>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                Result
+                                <div class="row" id="damageResultOutput">
+                                    <!-- This Space Intentionally Blank -->
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="row">
+            <!-- This section is for non-exploding die rolls -->
         </div>
     </div>
 </body>
