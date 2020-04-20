@@ -75,37 +75,37 @@ $(document).ready(function(){
 
         if($("#d4roll").is(':checked')){
             for (i=0; i< $("#d4qty").val() ;i++){
-                let thisroll=0
+                let thisroll=0;
                 damageTotal = damageTotal + rollCheck(4, thisroll)
             }
         };
         if($("#d6roll").is(':checked')){
             for (i=0; i< $("#d6qty").val() ;i++){
-                let thisroll=0
+                let thisroll=0;
                 damageTotal = damageTotal + rollCheck(6, thisroll)
             }
         };
         if($("#d8roll").is(':checked')){
             for (i=0; i< $("#d8qty").val() ;i++){
-                let thisroll=0
+                let thisroll=0;
                 damageTotal = damageTotal + rollCheck(8, thisroll)
             }
         };
         if($("#d10roll").is(':checked')){
             for (i=0; i< $("#d10qty").val() ;i++){
-                let thisroll=0
+                let thisroll=0;
                 damageTotal = damageTotal + rollCheck(10, thisroll)
             }
         };
         if($("#d12roll").is(':checked')){
             for (i=0; i< $("#d12qty").val() ;i++){
-                let thisroll=0
+                let thisroll=0;
                 damageTotal = damageTotal + rollCheck(12, thisroll)
             }
         };
         if($("#d20roll").is(':checked')){
             for (i=0; i< $("#d20qty").val() ;i++){
-                let thisroll=0
+                let thisroll=0;
                 damageTotal = damageTotal + rollCheck(20, thisroll)
             }
         };
@@ -118,5 +118,48 @@ $(document).ready(function(){
         if (goodStuff[1] > 0){$("#damageResultOutput").append(` With ${goodStuff[1]} Raise`)};
         if (goodStuff[1] > 1){$("#damageResultOutput").append(`s`)};
     })
+
+        //This function rolls non-exploding dice, should be re-written reduce code repetition
+        $("#rollDice").click(function(){
+
+            $("#flatResultOutput").empty();
+            let flatTotal = 0;
+    
+            if($("#d4rollflat").is(':checked')){
+                for (i=0; i< $("#d4qtyflat").val() ;i++){
+                    flatTotal = flatTotal + rollDie(4)
+                }
+            };
+            if($("#d6rollflat").is(':checked')){
+                for (i=0; i< $("#d6qtyflat").val() ;i++){
+                    flatTotal = flatTotal + rollDie(6)
+                }
+            };
+            if($("#d8rollflat").is(':checked')){
+                for (i=0; i< $("#d8qtyflat").val() ;i++){
+                    flatTotal = flatTotal + rollDie(8)
+                }
+            };
+            if($("#d10rollflat").is(':checked')){
+                for (i=0; i< $("#d10qtyflat").val() ;i++){
+                    flatTotal = flatTotal + rollDie(10)
+                }
+            };
+            if($("#d12rollflat").is(':checked')){
+                for (i=0; i< $("#d12qtyflat").val() ;i++){
+                    flatTotal = flatTotal + rollDie(12)
+                }
+            };
+            if($("#d20rollflat").is(':checked')){
+                for (i=0; i< $("#d20qtyflat").val() ;i++){
+                    flatTotal = flatTotal + rollDie(20)
+                }
+            };
+           
+    
+            flatTotal = flatTotal + parseInt($("#flatBonus").val()) - parseInt($("#flatPenalty").val());
+            $("#flatResultOutput").append(flatTotal);
+
+        })
   
 }); 

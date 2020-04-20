@@ -181,6 +181,87 @@
 
         <div class="row">
             <!-- This section is for non-exploding die rolls -->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Non-Exploding Dice Rolls
+                        <div type="button" class="btn btn-primary float-right" id="rollDice">Roll</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>Die</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d4rollflat" name="d4rollflat"></td>
+                                        <td>d4</td>
+                                        <td><input type="number" id="d4qtyflat" name="d4qtyflat" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d6rollflat" name="d6rollflat"></td>
+                                        <td>d6</td>
+                                        <td><input type="number" id="d6qtyflat" name="d6qtyflat" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d8rollflat" name="d8rollflat"></td>
+                                        <td>d8</td>
+                                        <td><input type="number" id="d8qtyflat" name="d8qtyflat" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d10rollflat" name="d10rollflat"></td>
+                                        <td>d10</td>
+                                        <td><input type="number" id="d10qtyflat" name="d10qtyflat" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d12rollflat" name="d12rollflat"></td>
+                                        <td>d12</td>
+                                        <td><input type="number" id="d12qtyflat" name="d12qtyflat" value=0 min=0></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="d20rollflat" name="d20rollflat"></td>
+                                        <td>d20</td>
+                                        <td><input type="number" id="d20qtyflat" name="d20qtyflat" value=0 min=0></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-3">
+                                Modifiers
+                                <div class="row">
+                                    <!-- Bonus: -->
+                                    <form>
+                                        <label for="flatBonus">Bonus:</label>
+                                        <input type="number" id="flatBonus" name="flatBonus" value=0 min=0>
+                                    </form>
+                                    <!-- penalty -->                                    
+                                    <form>
+                                        <label for="flatPenalty">Penalty:</label>
+                                        <input type="number" id="flatPenalty" name="flatPenalty" value=0 min=0>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <!-- Toughness
+                                <div class="row">
+                                    <form>
+                                        <input type="number" id="toughness" name="toughness" value=4 min=1>
+                                    </form>
+                                </div> -->
+                            </div>
+                            <div class="col-3">
+                                Result
+                                <div class="row" id="flatResultOutput">
+                                    <!-- This Space Intentionally Blank -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
