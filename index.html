@@ -26,6 +26,7 @@
                             <div class="col-3">
                                 Rolls
                                 <div class="row">
+                                <!-- Skill Die-->
                                     <div class="col-6">
                                         <label for="skillDie">Skill Die:</label>
                                     </div>
@@ -38,10 +39,11 @@
                                             <option value="12">12</option>
                                         </select>
                                     </div>
-                                    <!-- Skill Die-->
                                 </div>
                                 <div class="row">
+                                <!-- Wild Die -->
                                     <div class="col-6">
+                                        <input type="checkbox" id="wildDieCheck" name="wildDieCheck" checked>
                                         <label for="wildDie">Wild Die:</label>
                                     </div>
                                     <div class="col-6">
@@ -53,7 +55,6 @@
                                             <option value="12">12</option>
                                         </select>
                                     </div>
-                                    <!-- Wild Die-->
                                 </div>
                             </div>
                             <div class="col-3">
@@ -61,27 +62,20 @@
                                 <div class="row">
                                     <!-- Bonus: -->
                                     <form>
-                                        <!-- <div class="col-3"> -->
-                                            <label for="bonus">Bonus:</label>
-                                        <!-- </div> -->
-                                        <!-- <div class="col-3"> -->
-                                            <input type="number" id="bonus" name="bonus" value=0 min=0>
-                                        <!-- </div> -->
-                                        <!-- <div class="col-6"></div> -->
+                                        <label for="bonus">Bonus:</label>
+                                        <input type="number" id="bonus" name="bonus" value=0 min=0>
                                     </form>
+                                    <!-- penalty -->                                    
                                     <form>
                                         <label for="penalty">Penalty:</label>
                                         <input type="number" id="penalty" name="penalty" value=0 min=0>
                                     </form>
                                 </div>
-                                <!-- bonus -->
-                                <!-- penalty -->
                             </div>
                             <div class="col-3">
                                 Difficulty
                                 <div class="row">
                                     <form>
-                                        <!-- <label for="penalty">Penalty:</label> -->
                                         <input type="number" id="difficulty" name="difficulty" value=4 min=1>
                                     </form>
                                 </div>
@@ -89,7 +83,7 @@
                             <div class="col-3">
                                 Result
                                 <div class="row" id="resultOutput">
-
+                                    <!-- This Space Intentionally Blank -->
                                 </div>
                             </div>
                         </div>
@@ -98,7 +92,18 @@
             </div>
         </div>
         <div class="row">
-            <!-- Damage Box -->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        Roll for Damage
+                        <div type="button" class="btn btn-primary float-right" id="rollDamage">Roll</div>
+                    </div>
+                    <div class="card-body">
+                        
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

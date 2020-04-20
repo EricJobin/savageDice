@@ -23,12 +23,18 @@ rollSkillCheck = (skillDie, wildDie) => {
     let wDie=wildDie;
     let sDieTotal=0;
     let wDieTotal=0;
+    let wDieCheck=0;
     let sCheckTotal=0;
 
     let sDieCheck=rollCheck(sDie, sDieTotal)
     console.log(`Skill Die Total: ${sDieCheck}`);
-    let wDieCheck=rollCheck(wDie, wDieTotal)
-    console.log(`Wild Die Total: ${wDieCheck}`);
+
+    //if($("#wildDieCheck").is(':checked')){console.log(true)}else{console.log(false)}
+    if($("#wildDieCheck").is(':checked')){
+        console.log("Wild Die Rolled")
+        wDieCheck=rollCheck(wDie, wDieTotal)
+        console.log(`Wild Die Total: ${wDieCheck}`);
+    };
 
     if (sDieCheck >= wDieCheck){sCheckTotal=sDieCheck}
     else {sCheckTotal=wDieCheck};
